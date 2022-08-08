@@ -3,3 +3,19 @@ Recall: TP/(TP+FN) - of all the cases that are positive, how many did the model 
 Precision: TP/(TP+FP) - of all the cases that the model predicted to be positive, how many actually are positive?
 F1-Score: An average metric that takes both precision and recall into account.
 Support: How many instances of this class are there in the test dataset?
+
+
+
+Multiclass classification
+One vs Rest (OVR), in which a classifier is created for each possible class value, with a positive outcome for cases where the prediction is this class, and negative predictions for cases where the prediction is any other class. For example, a classification problem with four possible shape classes (square, circle, triangle, hexagon) would require four classifiers that predict:
+square or not
+circle or not
+triangle or not
+hexagon or not
+One vs One (OVO), in which a classifier for each possible pair of classes is created. The classification problem with four shape classes would require the following binary classifiers:
+square or circle
+square or triangle
+square or hexagon
+circle or triangle
+circle or hexagon
+triangle or hexagon
